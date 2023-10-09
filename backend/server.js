@@ -25,7 +25,7 @@ const app = express();
 const db = knex(knexConfig.development);
 
 const PORT = process.env.PORT || 3003;
-const LISTEN_IP = '127.0.0.1';
+const LISTEN_IP = process.env.LISTEN_IP || '127.0.0.1';
 const JWT_SECRET = process.env.JWT_SECRET;
 
 if (JWT_SECRET === undefined) {
